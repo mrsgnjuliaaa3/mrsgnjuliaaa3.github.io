@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Julia Mae's Personal Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #66e37f;
+            font-family: 'Poppins', sans-serif;
+            padding-top: 140px;
+        }
+
+        .navbar-outer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            z-index: 1000;
+        }
+
+        .navbar-custom {
+            background-color: #a0f4a1;
+            border-radius: 50px;
+            margin: 20px auto;
+            padding: 10px 30px;
+            max-width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.356);
+        }
+
+        .navbar-brand span {
+            font-size: 32px;
+            font-weight: 600;
+            color: black;
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: normal;
+            margin-right: 20px;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: transparent;
+        }
+
+        .navbar-collapse {
+            background-color: #a0f4a1;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #home-container,
+        #about-container,
+        #info-container {
+            scroll-margin-top: 140px;
+        }
+
+        .home-container {
+            background-color: #a0f4a1;
+            border-radius: 40px;
+            padding: 50px 30px;
+            max-width: 70%;
+            margin: 60px auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.356);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .home-container h2 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .home-container p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .left-content,
+        .right-content {
+            flex: 1 1 300px;
+        }
+
+        .left-content h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .left-content p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            background-color: transparent;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-container {
+            max-width: 80%;
+            margin: 80px auto;
+        }
+
+        .about-container h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 30px;
+            margin-left: 10%;
+        }
+
+        .about-box {
+            background-color: #a0f4a1;
+            border-radius: 40px;
+            padding: 40px 60px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.356);
+            margin: 0 auto;
+            max-width: 85%;
+        }
+
+        .about-box p {
+            font-size: 20px;
+            color: black;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .info-container {
+            max-width: 80%;
+            margin: 80px auto;
+        }
+
+        .info-container h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 30px;
+            margin-left: 10%;
+        }
+
+        .info-box {
+            background-color: #a0f4a1;
+            border-radius: 40px;
+            padding: 40px 60px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.356);
+            margin: 0 auto;
+            max-width: 85%;
+        }
+
+        .info-label {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            margin-bottom: 20px;
+            word-break: break-word;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-outer">
+        <nav class="navbar navbar-expand-md navbar-custom">
+            <div class="container m-2">
+                <a class="navbar-brand" href="#"><span>Welcome!</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home-container">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-container">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#info-container">Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- HOME SECTION -->
+    <div id="home-container" class="home-container">
+        <div class="left-content">
+            <h2>I am Julia Mae B. Marasigan</h2>
+            <p>
+                A 3rd year college student at<br>
+                Polytechnic University of the Philippines
+            </p>
+        </div>
+
+        <div class="right-content">
+            <img src="PIC.jpg" alt="Image" class="profile-image">
+        </div>
+    </div>
+
+    <!-- ABOUT ME SECTION -->
+    <div id="about-container" class="about-container">
+        <h2>About me</h2>
+        <div class="about-box">
+            <p>
+                I'm Julia Mae B. Marasigan, a third-year college student at Polytechnic University of the Philippines,
+                taking a Bachelor of Science in Information Technology. I am passionate about learning, exploring new
+                things, and continuously improving my skills.
+                <br><br>
+                Feel free to explore and get to know me better!
+            </p>
+        </div>
+    </div>
+
+    <!-- INFORMATION SECTION -->
+    <div id="info-container" class="info-container">
+        <h2>Information</h2>
+        <div class="info-box">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="info-label">Age:</div>
+                    <div class="info-value">20 years old</div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="info-label">Email:</div>
+                    <div class="info-value">juliamaemarasigan3@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="info-label">Address:</div>
+                    <div class="info-value">Batangas, Philippines</div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="info-label">Social:</div>
+                    <div class="info-value">IG: <a href="#" target="_blank">mrsgnjuliaaa</a></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="info-label">Contact:</div>
+                    <div class="info-value">+6399 999 99999</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
